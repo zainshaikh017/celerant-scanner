@@ -50,7 +50,7 @@ class _CelerantWebViewState extends State<CelerantWebView> {
   var input = document.getElementById("$fieldId");
   if (!input) {
     console.log("Field not found ❌ (maybe login page)");
-    return;
+    return; 
   }
 
   input.value = "$safeValue";
@@ -247,7 +247,7 @@ fieldset.table.styledetails table.itemReport tr.total td {
                 }
 
                 String testBarcode =
-                    "G7407CK"; // 👈 yahan apni test value daalo
+                    "AH7860-102"; // 👈 yahan apni test value daalo
 
                 await Future.delayed(const Duration(milliseconds: 300));
                 await autoFillAndSubmit(testBarcode);
