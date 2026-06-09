@@ -84,8 +84,11 @@ setTimeout(function() {
         print("Page not ready ❌");
         return;
       }
+
+        // Remove leading zeros only if barcode starts with 0
+  String cleanedBarcode = result.replaceFirst(RegExp(r'^0+'), '');
       await Future.delayed(const Duration(milliseconds: 300));
-      await autoFillAndSubmit(result);
+      await autoFillAndSubmit(cleanedBarcode);
     }
   }
 
